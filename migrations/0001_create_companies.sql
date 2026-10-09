@@ -1,0 +1,1 @@
+create table companies(id uuid primary key default gen_random_uuid(), name text not null,domain text unique not null,industry text not null,employees integer not null check(employees>=0),active boolean not null default true , metadata jsonb not null , created_at timestamptz default current_timestamp );
